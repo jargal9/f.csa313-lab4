@@ -46,6 +46,15 @@ class GradeCalculatorTest {
     }
 
     @Test
+    @DisplayName("65 оноо D, 30 оноо F байх ёстой")
+    void ordinaryScoresHaveExpectedGrades() {
+        assertAll(
+            () -> assertEquals("D", calc.letterGrade(65)),
+            () -> assertEquals("F", calc.letterGrade(30))
+        );
+    }
+
+    @Test
     @DisplayName("Бүх оноо хамгийн их байвал 100 гарах ёстой")
     void totalScore100() {
         assertEquals(
